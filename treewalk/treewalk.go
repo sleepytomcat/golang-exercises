@@ -9,9 +9,7 @@ type TreeNode struct {
 }
 
 func (tree *TreeNode) Walk(output *chan int) {
-	if tree == nil {
-		return
-	} else {
+	if tree != nil {
 		tree.WalkRecursive(output)
 	}
 	close(*output)
@@ -41,7 +39,7 @@ func main() {
 
 	output := make(chan int)
 	go tree.Walk(&output)
-	for value := range(output) {
+	for value := range output {
 		fmt.Println(value)
 	}
 }
