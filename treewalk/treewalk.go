@@ -16,9 +16,7 @@ func (tree *TreeNode) Walk(output *chan int) {
 }
 
 func (tree *TreeNode) WalkRecursive(output *chan int) {
-	if tree == nil {
-		return
-	} else {
+	if tree != nil {
 		*output <- tree.value
 		tree.left.WalkRecursive(output)
 		tree.right.WalkRecursive(output)
