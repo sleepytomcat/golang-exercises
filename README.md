@@ -1,1 +1,1 @@
-# golang-excercises
+# golang-exercises
