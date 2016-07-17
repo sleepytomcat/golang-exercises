@@ -1,1 +1,1 @@
-# golang-json-examples
+# golang-excercises
