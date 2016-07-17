@@ -27,15 +27,15 @@ func (tree *TreeNode) WalkRecursive(output *chan int) {
 
 func main() {
 	tree := &TreeNode{
-		&TreeNode{
-			nil,
-			nil,
-			8},
-		&TreeNode{
-			nil,
-			nil,
-			4},
-		10}
+			&TreeNode{
+				nil,
+				nil,
+				8},
+			&TreeNode{
+				nil,
+				nil,
+				4},
+			10}
 
 	output := make(chan int)
 	go tree.Walk(&output)
