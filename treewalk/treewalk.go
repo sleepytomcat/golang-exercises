@@ -1,24 +1,11 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
+import "fmt"
 
 type TreeNode struct {
 	left  *TreeNode
 	right *TreeNode
 	value int
-}
-
-func (tree *TreeNode) String() string {
-	if tree == nil {
-		return "."
-	} else {
-		leftSubTree := tree.left.String()
-		rightSubTree := tree.right.String()
-		return "[" + leftSubTree + "]" + strconv.Itoa(tree.value) + "[" + rightSubTree + "]"
-	}
 }
 
 func (tree *TreeNode) Walk(output *chan int) {
