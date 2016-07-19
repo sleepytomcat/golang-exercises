@@ -37,21 +37,8 @@ func Isomorphic(tree1 *TreeNode, tree2 *TreeNode) bool {
 }
 
 func main() {
-	tree1 := &TreeNode{
-		&TreeNode{
-			nil,
-			nil,
-			8},
-		&TreeNode{
-			nil,
-			nil,
-			4},
-		10}
-
-	tree2 := &TreeNode{
-		nil,
-		nil,
-		42}
+	tree1 := &TreeNode{&TreeNode{nil,nil,8}, &TreeNode{nil,nil,4}, 10}
+	tree2 := &TreeNode{nil, nil, 42}
 
 	fmt.Println(tree1)
 	fmt.Println(Isomorphic(tree1, tree1))
